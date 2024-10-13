@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Frijole&family=Monoton&display=swap');
+@import "../node_modules/bootstrap/scss/functions";
+
+
+
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ab6107;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffcc33;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px solid #e67300;
+    background-image: url('diwali-lights.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: flicker 2s infinite;
+}
+
+header h1 {
+    color: #ff6600;
+    font-size: 3em;
+    font-family: 'Bungee Shade', cursive;
+    text-shadow: 2px 2px 5px #000000;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.5em;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 4px #000000;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 204, 51, 0.3);
+    z-index: -1;
+    filter: blur(4px);
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+    header p {
+        font-size: 1.2em;
+    }
+}
+
+section {
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    border: 3px solid #ffcc33;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    background-image: url('1.png');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: black;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #ff9933, #ffcc33, #ff6699);
+    border-radius: 15px;
+    z-index: -1;
+    opacity: 0.3;
+    color: black;
+}
+
+h2 {
+    color: #ff6600;
+    font-family: 'Frijole', cursive;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff9933;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: black;
+}
+
+section p {
+    color: #333333;
+    line-height: 1.8;
+    font-size: 1.1em;
+    text-align: justify;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 20px;
+        max-width: 100%;
+        color: black;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gallery img {
+    width: 50%;
+    max-width: 100px;
+    height: auto;
+    border: 1px solid #ffcc00;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    background-color: rgba(255, 204, 0, 0.8);
+    padding: 10px;
+    position: relative;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 0.99;
+    }
+    20%, 24%, 55% {
+        opacity: 0.4;
+    }
+}
